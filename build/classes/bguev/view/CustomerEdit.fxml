@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="658.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bguev.view.CustomerEditController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="-1.0" prefHeight="552.0" prefWidth="602.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="customerTable" onMouseClicked="#load_customer" prefHeight="206.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="149.0" text="Name" />
+                  <TableColumn fx:id="addressColumn" minWidth="0.0" prefWidth="154.0" text="Address" />
+                  <TableColumn fx:id="phoneColumn" prefWidth="221.0" text="Phone" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0" spacing="25.0">
+               <children>
+                  <Label text="Name" />
+                  <TextField fx:id="nameField" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0" spacing="25.0">
+               <children>
+                  <Label text="Address" />
+                  <TextField fx:id="addressField" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0" spacing="25.0">
+               <children>
+                  <Label text="Address 2 (Optional)" />
+                  <TextField fx:id="address2Field" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0" spacing="25.0">
+               <children>
+                  <Label text="City" />
+                  <TextField fx:id="cityField" />
+                  <Label text="Zip/Postal" />
+                  <TextField fx:id="postalField" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0" spacing="25.0">
+               <children>
+                  <Label text="Country" />
+                  <ComboBox fx:id="countryBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="51.0" prefWidth="600.0" spacing="25.0">
+               <children>
+                  <Label text="Phone" />
+                  <TextField fx:id="phoneField" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="58.0" prefWidth="609.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#addButton" text="Add" />
+                  <Button mnemonicParsing="false" onAction="#update_button" text="Update" />
+                  <Button mnemonicParsing="false" onAction="#deleteButton" text="Delete" />
+               </children>
+            </HBox>
+            <Label fx:id="msg" text="Label" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

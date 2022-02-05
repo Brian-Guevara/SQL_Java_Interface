@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bguev.view.AppointmentAddScreenController">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="40.0" layoutY="1.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="30.0" prefWidth="345.0" text="Add Appointment" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" />
+               </VBox.margin></Label>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="User" />
+                  <TextField fx:id="userF" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="Customer" />
+                  <ComboBox fx:id="customerBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="Date" />
+                  <DatePicker fx:id="dateF" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="Title" />
+                  <TextField fx:id="titleF" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="Description" />
+                  <TextField fx:id="descF" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="Type" />
+                  <ComboBox fx:id="typeBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="Start" />
+                  <ComboBox fx:id="startBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="End" />
+                  <ComboBox fx:id="endBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="Location" />
+                  <ComboBox fx:id="locBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="Contact" />
+                  <TextField fx:id="contF" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Label text="URL (optional)" />
+                  <TextField fx:id="urlF" prefHeight="25.0" prefWidth="293.0" />
+               </children>
+            </HBox>
+            <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="461.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#saveButtonAction" text="Save" />
+                  <Button mnemonicParsing="false" onAction="#closeButtonAction" text="Cancel" />
+               </children>
+            </HBox>
+            <Label fx:id="msg" text="Label">
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
